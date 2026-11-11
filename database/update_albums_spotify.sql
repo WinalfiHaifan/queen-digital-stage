@@ -17,7 +17,7 @@ SET `cover_url` = 'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e022d5
 WHERE `album_title` = 'Sheer Heart Attack' AND `release_year` = 1974;
 
 UPDATE `albums`
-SET `spotify_url` = 'https://open.spotify.com/album/3g8q0w3yxetDMMCgqe6Yx'
+SET `spotify_url` = 'https://open.spotify.com/album/3g8q0w3yxetDMMCgqe6YxB'
 WHERE `album_title` = 'Greatest Hits II' AND `release_year` = 1991;
 
 UPDATE `albums`
