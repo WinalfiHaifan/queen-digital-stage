@@ -1,5 +1,7 @@
 # Implementation Guide — Queen Digital Stage
 
+Panduan ini mendokumentasikan edisi HTML awal. Untuk menjalankan versi PHP dan mengelola konten melalui Admin, gunakan [README](README.md).
+
 Dokumen ini menjelaskan pembaruan yang sudah diterapkan pada proyek dan bagian kode yang perlu diedit ketika tim ingin menambah konten.
 
 ## Tahap 1 — Struktur proyek bersama

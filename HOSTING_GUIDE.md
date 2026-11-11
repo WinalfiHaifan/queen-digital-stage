@@ -1,39 +1,7 @@
-# Panduan Hosting Queen Digital Stage
+# Menyiapkan hosting Queen Digital Stage
 
-Proyek ini adalah website statis. Pastikan `index.html` berada di folder paling atas yang dipublikasikan, sejajar dengan halaman HTML lain dan folder `assets`.
+Untuk demo di laptop, ikuti langkah XAMPP pada [README](README.md). Aplikasi memakai PHP 8.2 dengan ekstensi `pdo_mysql` dan `mbstring`, serta MySQL 8.0.16+ atau MariaDB dengan dukungan `CHECK` dan InnoDB. Apache menggunakan `mod_rewrite` agar URL lama `.html` membuka halaman PHP yang sesuai.
 
-## Opsi A — GitHub Pages
+Untuk hosting PHP, buat basis data `utf8mb4` di panel hosting. Impor `database/schema.sql`, lalu `database/checkout.sql` untuk tabel pesanan. Impor `database/seed.sql` satu kali pada basis data kosong. Pada instalasi yang sudah ada, jalankan `database/update_albums_spotify.sql` untuk memperbarui tautan dan cover lima album tanpa mengimpor ulang katalog. Sediakan `QUEEN_DB_HOST`, `QUEEN_DB_PORT`, `QUEEN_DB_NAME`, `QUEEN_DB_USER`, dan `QUEEN_DB_PASSWORD` di konfigurasi server. Gunakan akun basis data aplikasi yang hanya memiliki `SELECT`, `INSERT`, `UPDATE`, dan `DELETE` pada skema ini. Buat akun administrator dengan hash dari fungsi PHP `password_hash()` atau gunakan installer lokal saat server basis data tersedia pada `127.0.0.1`.
 
-1. Buat repository baru di GitHub, misalnya `queen-digital-stage`.
-2. Unggah seluruh isi folder proyek, bukan folder induk yang kosong.
-3. Buka **Settings → Pages**.
-4. Pada **Build and deployment**, pilih **Deploy from a branch**.
-5. Pilih branch `main`, folder `/ (root)`, lalu **Save**.
-6. Tunggu proses deployment selesai dan buka URL yang ditampilkan GitHub Pages.
-
-Format URL biasanya:
-
-```text
-https://NAMA-PENGGUNA.github.io/queen-digital-stage/
-```
-
-## Opsi B — Netlify Drop
-
-1. Masuk ke Netlify.
-2. Buka halaman Netlify Drop.
-3. Seret folder proyek yang sudah diekstrak ke area unggah.
-4. Tunggu hingga URL publik dibuat.
-
-## Pemeriksaan setelah hosting
-
-- Home terbuka tanpa halaman 404.
-- Navigasi menuju seluruh delapan halaman.
-- Gambar, ikon, CSS, dan JavaScript termuat.
-- Menu mobile dapat dibuka dan ditutup.
-- Filter Gallery dan Store berfungsi.
-- Pencarian Music memberi hasil.
-- Ukuran, jumlah, Add to Cart, dan View Cart pada Store berfungsi.
-- Form Fan Zone menampilkan pesan berhasil.
-- Tidak ada scroll horizontal pada layar ponsel.
-
-Jika gambar atau CSS tidak muncul, periksa kembali bahwa folder `assets` terunggah sejajar dengan `index.html` dan huruf besar/kecil nama file tidak berubah.
+Aktifkan HTTPS dan dukungan `.htaccess`. Periksa bahwa direktori `app`, `database`, dan `scripts` tidak dapat diakses melalui HTTP. Kelola pengaturan dan kredensial lokal di luar berkas yang dibagikan. Hosting GitHub Pages mendukung aset statis. Gunakan hosting dengan PHP dan basis data untuk fitur Admin dan Fan Zone.

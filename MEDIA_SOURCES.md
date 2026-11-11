@@ -79,3 +79,13 @@ YouTube links are opened inside a shared in-page dialog using privacy-enhanced e
 
 ## Album covers
 The album cover files currently come from assets provided in the conversation. Official album covers are usually copyrighted, so they are kept as educational visual references for this class project.
+
+
+- Album links and cover references:
+  - [Queen](https://open.spotify.com/album/28VpCXV4h5EgAAWGAnGu6x) — cover thumbnail served by Spotify.
+  - [Queen II](https://open.spotify.com/album/0NouBnbXRJKFWzm9LwCW0K) — existing local reference cover retained.
+  - [Sheer Heart Attack](https://open.spotify.com/album/1VP4MvaxYgl0XHeLZHnfcq) — cover thumbnail served by Spotify.
+  - [Greatest Hits II](https://open.spotify.com/album/3g8q0w3yxetDMMCgqe6Yx) — existing local reference cover retained.
+  - [Flash Gordon](https://open.spotify.com/album/2SS9qutxzz0XZf4zmoQVdx) — cover thumbnail served by Spotify.
+
+  Album artwork remains copyrighted by its rights holders. New cover thumbnails are served by Spotify and the website links and embeds Spotify rather than distributing new independent artwork files.

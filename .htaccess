@@ -1,0 +1,5 @@
+DirectoryIndex index.php index.html
+Options -Indexes
+RewriteEngine On
+RewriteRule ^(app|database|scripts)(/|$) - [F,L,NC]
+RewriteRule ^(index|about|music|history|gallery|fan-zone|store)\.html$ $1.php [END]

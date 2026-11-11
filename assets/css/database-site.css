@@ -1,0 +1,79 @@
+[hidden] { display: none !important; }
+.cover-placeholder { display: grid; place-items: center; width: 100%; min-height: 145px; aspect-ratio: 1; background: #21191c; color: #d7aa58; font: 3rem Georgia, serif; }
+.data-chip { display: inline-block; border: 1px solid #5d452a; border-radius: 999px; background: #241c1c; color: #f4d49a; padding: .14rem .55rem; font-size: .8rem; font-weight: 650; }
+.album-metadata, .song-meta, .content-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
+.album-metadata { margin-top: 12px; }
+.song-meta .song-year { position: static; }
+.dynamic-song { padding: 0; min-width: 0; }
+.dynamic-song .song-card-body { display: grid; gap: 10px; padding: clamp(16px, 2vw, 25px); }
+.dynamic-song .song-card-body > * { margin-block: 0; }
+.dynamic-song .song-writer, .member-birth { color: #dfbe88; }
+.dialog-story, .fan-note { white-space: pre-wrap; overflow-wrap: anywhere; }
+.song-player { width: 100%; min-height: 152px; border: 0; border-radius: 12px; margin-block: 12px; }
+.song-filters { display: grid; grid-template-columns: minmax(180px, 2fr) repeat(2, minmax(110px, 1fr)) auto; gap: 12px; align-items: end; max-width: 920px; margin: 0 auto 12px; }
+.song-filters label { display: grid; gap: 6px; font-weight: 650; min-width: 0; }
+.song-filters .input { width: 100%; min-width: 0; color-scheme: dark; }
+.song-filters .text-link { justify-self: start; }
+.lineup-summary { list-style: none; margin: 1rem 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 18px; }
+.lineup-summary li { display: grid; }
+.lineup-summary span { color: #dfbe88; font-size: .86rem; }
+.dynamic-video { position: relative; overflow: hidden; isolation: isolate; }
+.dynamic-video .video-thumbnail { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.dynamic-video::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(transparent, #100b11ad); }
+.dynamic-video .play-button { position: relative; }
+.gallery-open { display: block; width: 100%; border: 0; padding: 0; background: transparent; cursor: zoom-in; }
+.gallery-open img { display: block; width: 100%; }
+.gallery-dialog img { display: block; width: 100%; max-height: 68vh; object-fit: contain; margin-top: 10px; }
+.content-source { display: inline-block; margin-top: .45rem; }
+.history-page .award-card { height: auto; }
+.empty-state { color: #c3b6ac; }
+.product-stock { color: #b8e1bc; font-weight: 700; }
+.stock-empty, .form-error { color: #ffb8a6 !important; }
+.product-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 15px 0; }
+.product-facts dt { color: #d5c7b4; font-size: .88rem; }
+.product-facts dd { margin: 0; font-weight: 750; }
+.quantity-field { display: block; margin-bottom: .3rem; font-weight: 750; }
+.quantity-input { width: 100px; margin: 0 0 14px; }
+.size-input { max-width: 160px; margin: 0 0 14px; color-scheme: dark; }
+.btn:disabled, .input:disabled { cursor: not-allowed; opacity: .55; }
+.cart-link, .cart-line button { background: none; border: 0; color: #f4d49a; cursor: pointer; font: inherit; }
+.cart-link { padding: 0; text-decoration: underline; }
+#cart-adjustment { color: #ffdc9a; }
+.cart-line { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-bottom: 1px solid #4e3b2d; padding: 12px 0; }
+.published-note { padding: 10px 0; border-bottom: 1px solid #4e3b2d; }
+.published-note:last-child { border: 0; }
+.published-note span { overflow-wrap: anywhere; }
+.checkout-header { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.checkout-main { padding-block: clamp(28px, 5vw, 64px); }
+.checkout-main > h1 { font-size: clamp(2.5rem, 6vw, 4.8rem); margin: .2rem 0 1.5rem; }
+.checkout-layout { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); align-items: start; gap: 20px; }
+.checkout-panel { padding: clamp(16px, 3vw, 28px); overflow-wrap: anywhere; }
+.checkout-panel h2 { font-size: clamp(1.35rem, 3vw, 1.9rem); margin: 0 0 12px; }
+.checkout-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.checkout-fields label { display: grid; gap: 6px; font-weight: 650; }
+.checkout-fields .input { width: 100%; min-width: 0; }
+.checkout-fields textarea { resize: vertical; }
+.checkout-wide { grid-column: 1 / -1; }
+.checkout-payment { display: flex; align-items: start; gap: 10px; border: 1px solid #5d452a; border-radius: 10px; padding: 12px; margin: 18px 0; }
+.checkout-payment p { margin: 3px 0 0; color: #d5c7b4; }
+.checkout-items { list-style: none; padding: 0; margin: 0 0 12px; }
+.checkout-items li, .checkout-fee, .checkout-total { display: flex; justify-content: space-between; gap: 12px; }
+.checkout-items li { border-bottom: 1px solid #4e3b2d; padding-block: 10px; }
+.checkout-items li div { display: grid; }
+.checkout-items li div span, .checkout-fee { color: #d5c7b4; }
+.checkout-total { border-top: 1px solid #5d452a; padding-top: 12px; }
+.checkout-total strong { color: #ffdc9a; }
+.checkout-error { color: #ffd1c4; background: #3e211f; border-radius: 10px; padding: 12px 12px 12px 32px; overflow-wrap: anywhere; }
+.checkout-receipt { max-width: 620px; }
+.checkout-address { white-space: pre-line; }
+@media (max-width: 900px) {
+  .page-music .song-explorer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .page-music .song-explorer-grid { grid-template-columns: minmax(0, 1fr); }
+  .checkout-layout, .checkout-fields { grid-template-columns: minmax(0, 1fr); }
+  .checkout-layout aside { grid-row: 1; }
+  .song-filters { grid-template-columns: 1fr 1fr; }
+  .song-filters label:first-child { grid-column: 1 / -1; }
+  .lineup-summary { gap: 8px; }
+}
